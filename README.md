@@ -67,8 +67,8 @@ DEEPSEEK_API_KEY=sk-your-deepseek-api-key-here
 ```bash
 CUDA_VISIBLE_DEVICES=0 vllm serve /mnt/modelScope/Qwen3-Embedding-8B \
 --port 4061 \
---served-model-name Qwen3-Embedding-8B-LCH \
---gpu-memory-utilization 0.25 \
+--served-model-name Qwen3-Embedding-8B \
+--gpu-memory-utilization 0.5 \
 --max-model-len 4096
 
 ```
@@ -78,7 +78,7 @@ CUDA_VISIBLE_DEVICES=0 vllm serve /mnt/modelScope/Qwen3-Embedding-8B \
 ```bash
 CUDA_VISIBLE_DEVICES=1 vllm serve /mnt/modelScope/bge-reranker-v2-m3 \
 --port 4062 \
---served-model-name bge-reranker-v2-m3-LCH \
+--served-model-name bge-reranker-v2-m3 \
 --gpu-memory-utilization 0.3
 
 ```
