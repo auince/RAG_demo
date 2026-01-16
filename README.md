@@ -19,23 +19,6 @@
 * **⚡ 本地模型加速**: Embedding 和 Rerank 模型通过 **vLLM** 本地部署，低延迟且数据隐私可控。
 * **💻 极简交互**: 基于 **Gradio** 的现代化 Web UI，支持流式输出和实时索引构建。
 
----
-
-## 🛠️ 技术架构
-
-```mermaid
-graph LR
-    A[Markdown 文档] --> B(清洗 & 智能分块)
-    B --> C[本地 Embedding (vLLM)]
-    C --> D[(ChromaDB 向量库)]
-    
-    E[用户提问] --> F[向量检索 (Top 20)]
-    F --> D
-    D --> G[本地 Reranker (Top 5)]
-    G --> H{DeepSeek LLM}
-    H --> I[流式回答]
-
-```
 
 ---
 
