@@ -10,12 +10,12 @@ class LocalEmbeddings:
     """
     手动封装 vLLM Embedding 接口，避免 LangChain 自动构造复杂 Payload 导致的 400 错误。
     对应端口: 4061
-    模型名称: Qwen3-Embedding-8B-LCH
+    模型名称: Qwen3-Embedding-8B
     """
     
     def __init__(self):
         self.base_url = "http://localhost:4061/v1/embeddings"
-        self.model_name = "Qwen3-Embedding-8B-LCH"
+        self.model_name = "Qwen3-Embedding-8B"
         self.api_key = "EMPTY"  # vLLM 本地部署不需要 Key
 
     @property
