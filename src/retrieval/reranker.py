@@ -12,7 +12,7 @@ class LocalReranker(BaseDocumentCompressor):
     """
     # 根据你提供的文档，API 路径通常是 /score 而不是 /v1/score
     endpoint: str = "http://localhost:4062/score"
-    model_name: str = "bge-reranker-v2-m3-LCH"
+    model_name: str = "bge-reranker-v2-m3"
     top_n: int = 5
     score_threshold: float = 0.0
 
